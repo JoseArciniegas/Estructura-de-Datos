@@ -1,3 +1,17 @@
+//Dentro de esta estructura también hay una clase llamada nodo que tiene lo siguiente:
+
+//public class Nodo {
+    //int dato; //guarda el dato que le hemos dado.
+    //Nodo siguiente; //Este apunta al siguiente nodo.
+    
+    //Nodo(int dato2){
+        //dato=dato2;
+        //siguiente=null;
+    //}
+    
+//}
+
+
 package listaenlazada;
 
 public class ListaEnlazada {
