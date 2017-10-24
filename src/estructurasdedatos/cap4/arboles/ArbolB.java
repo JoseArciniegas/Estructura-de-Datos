@@ -54,4 +54,32 @@ public class ArbolB{
         }
         return aux;
     }
+    
+    public boolean ArbolVacio(){
+        return raiz== null;
+    }
+    
+    public void Orden(NodoArbol r){
+        if(r!=null){
+            Orden(r.hIzquierdo);
+            System.out.println(r.dato);
+            Orden(r.hDerecho);
+        }
+    }
+    
+    public void PreOrden(NodoArbol r){
+        if(r!=null){
+            System.out.println(r.dato);
+            PreOrden(r.hIzquierdo);
+            PreOrden(r.hDerecho);
+        }
+    }
+    
+    public void PostOrden(NodoArbol r){
+        if(r!=null){
+            PostOrden(r.hIzquierdo);
+            PostOrden(r.hDerecho);
+            System.out.println(r.dato);
+        }
+    }
 }
