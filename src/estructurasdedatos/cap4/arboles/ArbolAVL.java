@@ -142,6 +142,43 @@ public class ArbolAVL {
             System.out.println(r.dato + ",");
         }
     }
+    
+        public boolean Eliminar(int d) {
+        NodoArbolAVL aux = null;
+        NodoArbolAVL aux2 = (Buscar(d, raiz));
+        if (Buscar(d, raiz) != null) {
+            if ((aux.hizquierdo == null) && (aux.hderecho == null)) {
+                aux = null;
+            }else{
+                if((aux.hizquierdo!=null)&&(aux.hderecho!=null)){
+                    if(aux == raiz){
+                        aux2=aux.hizquierdo;
+                        aux=aux.hderecho;
+                        while(aux.hizquierdo!=null){
+                            aux= aux.hizquierdo;
+                        }
+                        aux.hizquierdo=aux2;
+                    }else{
+                        if(aux==raiz){
+                            if(aux.hizquierdo!=null){
+                                aux=aux.hderecho;
+                            }else{
+                                aux=aux.hderecho;
+                            }
+                        }else{
+                            if(aux.hizquierdo!=null){
+                                aux = aux.hizquierdo;
+                            }else{
+                                aux=aux.hizquierdo;
+                            }
+                        }
+                    }
+                }
+                return true;
+            }
+        }
+        return false;
+    }
 
 }
 
